@@ -1,0 +1,11 @@
+- Customer accounts
+- Agent accounts
+- Identity verification
+- Booking system
+- Agent matching
+- Before/after photos
+- Escrow payments
+- Ratings
+- Reviews
+- Notifications
+- Admin dashboard
