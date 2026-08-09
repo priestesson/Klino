@@ -1,0 +1,475 @@
+/* =========================
+   K L I N O
+   Main Website Styles
+========================= */
+
+:root {
+    --navy: #071a2b;
+    --blue: #0b5ed7;
+    --green: #8fd14f;
+    --white: #ffffff;
+    --light: #f5f8fb;
+    --text: #18212b;
+    --muted: #647180;
+    --border: #e5eaf0;
+    --shadow: 0 20px 50px rgba(7, 26, 43, 0.10);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    width: 100%;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--navy);
+}
+
+.logo-k {
+    color: var(--green);
+}
+
+.navbar nav {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar nav a {
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.navbar nav a:hover {
+    color: var(--blue);
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.login-btn {
+    font-weight: 600;
+}
+
+.signup-btn {
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: var(--navy);
+    color: var(--white);
+    font-weight: 700;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 9px;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.primary-btn {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: var(--white);
+    border: 1px solid var(--border);
+    color: var(--navy);
+}
+
+.secondary-btn:hover {
+    background: var(--light);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 680px;
+    padding: 90px 7%;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 70px;
+    background: var(--light);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow {
+    margin-bottom: 14px;
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 6vw, 76px);
+    line-height: 1.02;
+    letter-spacing: -3px;
+    color: var(--navy);
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--green);
+    display: block;
+}
+
+.hero-text {
+    max-width: 560px;
+    font-size: 19px;
+    color: var(--muted);
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.trust-points {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.hero-card {
+    min-height: 420px;
+    border-radius: 30px;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-card::before {
+    content: "";
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: var(--green);
+    position: absolute;
+    top: -80px;
+    right: -80px;
+}
+
+.hero-card::after {
+    content: "";
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: var(--blue);
+    position: absolute;
+    bottom: -100px;
+    left: -80px;
+}
+
+.hero-card-inner {
+    position: relative;
+    z-index: 2;
+    width: 75%;
+    color: var(--white);
+}
+
+.clean-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--green);
+    color: var(--navy);
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.hero-card h2 {
+    font-size: 38px;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.hero-card p {
+    color: #c8d3df;
+}
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.services,
+.how-it-works,
+.about {
+    padding: 100px 7%;
+}
+
+.section-heading {
+    max-width: 650px;
+    margin-bottom: 55px;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: 46px;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.section-heading p:last-child {
+    color: var(--muted);
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    padding: 35px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--white);
+    transition: 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.service-icon {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: var(--navy);
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.service-card p {
+    color: var(--muted);
+}
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.how-it-works {
+    background: var(--light);
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.step span {
+    display: inline-block;
+    color: var(--blue);
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.step h3 {
+    color: var(--navy);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: var(--muted);
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.about-content {
+    max-width: 750px;
+}
+
+.about h2 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.about h2 span {
+    color: var(--green);
+}
+
+.about p:not(.eyebrow) {
+    color: #c8d3df;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    padding: 100px 7%;
+    text-align: center;
+    background: var(--green);
+}
+
+.cta h2 {
+    color: var(--navy);
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    color: #30431f;
+    margin-bottom: 25px;
+}
+
+.cta .primary-btn {
+    background: var(--navy);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 50px 7%;
+    background: #04121f;
+    color: var(--white);
+}
+
+.footer-logo {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #aebbc7;
+}
+
+.copyright {
+    margin-top: 25px;
+    font-size: 13px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 70px 5%;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .service-grid,
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .services,
+    .how-it-works,
+    .about {
+        padding: 75px 5%;
+    }
+
+    .section-heading h2,
+    .about h2,
+    .cta h2 {
+        font-size: 38px;
+    }
+
+    .hero-card {
+        min-height: 350px;
+    }
+}
