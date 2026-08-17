@@ -1,0 +1,156 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book a Cleaning | Klino</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+<header class="booking-header">
+
+    <a href="/" class="booking-logo">
+        <span>K</span>lino
+    </a>
+
+    <a href="/" class="back-home">
+        ← Home
+    </a>
+
+</header>
+
+
+<main class="booking-page">
+
+    <div class="booking-intro">
+
+        <span>BOOK A CLEANING</span>
+
+        <h1>
+            Let's get your space
+            <strong>spotless.</strong>
+        </h1>
+
+        <p>
+            Tell us what you need and we'll take care of the rest.
+        </p>
+
+    </div>
+
+
+    <form class="booking-form">
+
+        <div class="form-group">
+            <label for="service">Cleaning service</label>
+
+            <select id="service" name="service" required>
+
+                <option value="">
+                    Select a service
+                </option>
+
+                <option value="home">
+                    Home Cleaning
+                </option>
+
+                <option value="office">
+                    Office Cleaning
+                </option>
+
+                <option value="deep">
+                    Deep Cleaning
+                </option>
+
+                <option value="event">
+                    Event Cleaning
+                </option>
+
+            </select>
+        </div>
+
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label for="date">
+                    Preferred date
+                </label>
+
+                <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="time">
+                    Preferred time
+                </label>
+
+                <input
+                    type="time"
+                    id="time"
+                    name="time"
+                    required
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="address">
+                Cleaning address
+            </label>
+
+            <textarea
+                id="address"
+                name="address"
+                rows="4"
+                placeholder="Enter the address where the cleaning will take place"
+                required
+            ></textarea>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="notes">
+                Anything else we should know?
+            </label>
+
+            <textarea
+                id="notes"
+                name="notes"
+                rows="3"
+                placeholder="Optional"
+            ></textarea>
+
+        </div>
+
+
+        <button type="submit" class="booking-button">
+            Continue Booking →
+        </button>
+
+    </form>
+
+</main>
+
+</body>
+</html>
